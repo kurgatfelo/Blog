@@ -36,7 +36,7 @@ class User(UserMixin,db.Model):
     def __repr__(self):
         return f'User {self.username}'
 
-
+class Blog(db.Model):
     """
     List of blogs in each category 
     """
@@ -63,7 +63,7 @@ class User(UserMixin,db.Model):
         return blogs
 
     @classmethod
-    def getBlogId(cls, id):
+    
         blog = Blog.query.filter_by(id=id).first()
         return blog
 
