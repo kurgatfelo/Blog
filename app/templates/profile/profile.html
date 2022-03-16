@@ -38,11 +38,11 @@
     <div class="row">
         <!-- displaying  Username-->
         <div class="col-md-4">
-          
+            <h3> {{user.username}} </h3>
 
             <!--Displaying user bio-->
             {% if user.bio %}
-            <p> {{user.bio}}</p>
+           
             {%else%}
             <p> {{user.username}} has no bio </p>
             {% endif %}
