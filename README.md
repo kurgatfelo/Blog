@@ -1,4 +1,4 @@
-# PITCHES WEB
+#BLOGS_WEB
 
 ## Author
 
