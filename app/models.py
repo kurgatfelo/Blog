@@ -71,10 +71,10 @@ class Blog(db.Model):
     def get_all_blogs(cls):
         return Blog.query.order_by(Blog.posted_at).all()
 
-
+class Comment(db.Model):
     """
     User comment model for each blog 
-    """
+    """class Comment(db.Model):
     __tablename__ = 'comments'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -83,7 +83,7 @@ class Blog(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
     blog_id = db.Column(db.Integer, db.ForeignKey("blogs.id"))
 
-    def save_comment(self):
+    
         db.session.add(self)
         db.session.commit()
 
