@@ -63,12 +63,12 @@ class Blog(db.Model):
         return blogs
 
     @classmethod
-    
+    def getBlogId(cls, id):
         blog = Blog.query.filter_by(id=id).first()
         return blog
 
     @classmethod
-    def get_all_blogs(cls):
+ 
         return Blog.query.order_by(Blog.posted_at).all()
 
 class Comment(db.Model):
