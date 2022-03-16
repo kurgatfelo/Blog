@@ -42,7 +42,7 @@
 
             <!--Displaying user bio-->
             {% if user.bio %}
-           
+            <p> {{user.bio}}</p>
             {%else%}
             <p> {{user.username}} has no bio </p>
             {% endif %}
@@ -55,7 +55,7 @@
             <img style=" border-radius:50%; height:400px;" src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail img-responsive">
         
             {%else%}
-            <p>No profile picture</p>
+           
         
             {% endif %}
         
