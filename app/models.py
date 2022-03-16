@@ -68,10 +68,10 @@ class Blog(db.Model):
         return blog
 
     @classmethod
- 
+    def get_all_blogs(cls):
         return Blog.query.order_by(Blog.posted_at).all()
 
-class Comment(db.Model):
+
     """
     User comment model for each blog 
     """
